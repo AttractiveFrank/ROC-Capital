@@ -1,0 +1,22 @@
+.btn-social{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px !important;
+    height: 48px;
+    border: 1px solid white;
+    color: $white;
+    font-size: 1.5em;
+    transition: 0.3s;
+    background: transparent;
+    border-radius: 0;
+    background: rgba(black,0.2);
+    // padding: 0;
+    &:hover{
+        text-decoration: none;
+        background: rgba(white,0.2);
+        color: $white;
+        border-color: $white;
+    }
+    
+}

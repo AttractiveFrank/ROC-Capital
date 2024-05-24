@@ -1,0 +1,138 @@
+/*-----------------------------------------------------------------
+[Legal Notice]
+
+Copyright (c) Miradontsoa
+Website Template by miradontsoa
+http://highhay.com
+http://miradontsoa.com
+
+IMPORTANT : This is an overwritting CSS rules of the default layout of the template (main.css).
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+/** CSS Reference
+    1. Init Tag style
+    2. Page cover on scroll / .page-cover
+**/
+/*------------------------------------------------------------------
+[colors]
+    blue : #037FD5
+    black : #111111
+**/
+
+@import "variables";
+
+// $black : #3d3d3d;
+$black : #111111;
+$color1 : #037FD5;
+@mixin transluscentBg () {
+    background: rgba(white,0.15);
+    border-color: transparent;
+    @media (min-width: $medium-up) {
+        background: rgba(white,0.15);
+    }
+    &:hover{
+        border-color: $white;
+    }
+}
+
+/* 1. Init Tag style */
+a{
+    color: $color1;
+    &:hover{
+        color: transparentize($color1, 0.2)
+    }
+}
+/* 2. Page cover on scroll / .page-cover */ 
+.page-cover{
+    &:after{
+        content: "";
+        background: linear-gradient(to left, rgb(51, 125, 209), #00152e);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: 0.6s;
+        // @media (min-width: $large-up) {
+        //     left: 40px;
+        //     right: 40px;
+        //     bottom: 40px;
+        //     top: 40px;
+        // }
+    }
+    &.scrolled:after{
+        opacity: 0.9;
+        // background: $black;
+        // background: #0d0d0d;
+        // background: rgba(#000, 0.8);
+        // background: $black;
+    }
+}
+
+/* page header */
+.menu-icon{
+    @include transluscentBg();
+    box-shadow: 0 0 2px rgba(black,0.2);
+}
+.text-dark .menu-icon{
+    border-color: transparent;
+    background: rgba(black, 0.15);
+    &:hover{
+        border-color: $black;
+    }
+}
+.page-header-alpha .navbar-sidebar{
+    box-shadow: 0 0 2px rgba(black,0.2);
+}
+.page-header-alpha .navbar-sidebar .nav-item a{
+    @include transluscentBg();
+}
+.page-header-alpha .navbar-mainmenu:before{
+    @media (min-width: $medium-up) {
+        border-color: transparent;
+    }
+}
+.text-dark.page-header-alpha .navbar-sidebar .nav-item a{
+    background: rgba(black, 0.15);
+    border-color: transparent;
+}
+
+/* buttons */
+.btn-framed{
+    @include transluscentBg();
+}
+.btn-social{
+    @include transluscentBg();
+}
+.btn-outline{
+    @include transluscentBg();
+    box-shadow: 0 0 2px rgba(black,0.2);
+}
+.btn-arrow > .icon{
+    @include transluscentBg();
+    box-shadow: 0 0 2px rgba(black,0.2);
+}
+.section-text-dark .btn-arrow .icon{
+    
+    background: rgba(black, 0.15);
+    border-color: transparent;
+    &:hover{
+        border-color: $black;
+    }
+}
+.section-text-dark .btn-arrow:hover{
+    color: $black;
+}
+/* forms */
+.form-control-outline.form-control-white{
+    background: rgba(white,0.05);
+    border-color: transparent;
+    &:active,
+    &:focus{
+        border-color: $white;
+    }
+}

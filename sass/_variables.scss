@@ -1,0 +1,103 @@
+// colors
+$primary:  #037FD5;
+$secondary:  #3f4b62;
+$yellow: #ffc107;
+
+// white
+$white : #ffffff;
+
+// black
+$black : #1d1d1d;
+$light-black : #2d2d2d;
+$medium-black : $black;
+$dark-black : #0d0d0d;
+
+// gray
+$gray: #8b8b8b;
+$white-gray: #f8f9fa;
+$light-gray: #e1e1e1;
+$medium-gray: $gray;
+$dark-gray: #505050;
+
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  white: $white,
+  black: $black,
+);
+
+$bg-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  light-gray: $light-gray,
+  white-gray: $white-gray,
+  white: $white,
+  black: $black,
+);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval: 8% !default;
+
+// gradients
+$gradient-primary: linear-gradient(#{"to right"}, $primary, mix($primary, $yellow, 0.25) );
+$gradient-secondary: linear-gradient(#{"to right"}, $secondary, mix($secondary, $primary, 0.4) );
+$gradient-purple: linear-gradient(#{"to right"}, #fD6585, #0D25B9);
+$gradient-landscape: linear-gradient(#{"to right"}, #F97794, #623AA2);
+$gradient-blue: linear-gradient(#{"to right"}, #72EDF2, #5151E5);
+$gradient-bluered: linear-gradient(#{"to right"}, #037FD5, #dc3545);
+$gradient-aqua: linear-gradient(#{"to right"}, #3C8CE7, #00EAFF);
+$gradient-green: linear-gradient(#{"to right"}, #70F570, #49C628);
+$gradient-greenyellow: linear-gradient(#{"to right"}, #FFF720, #3CD500);
+$gradient-orange: linear-gradient(#{"to right"}, #FCCF31, #F55555);
+$gradient-red: linear-gradient(#{"to right"}, #FFAA85, #B3315F);
+
+// fonts
+// sans
+$sans-serif : 
+  // Customized webfont
+  "Open Sans", "Proxima Nova ","Segoe UI", "Opensans", "Roboto", "Helvetica", 
+  // "Proxima Nova","Segoe UI", "Open Sans", "Opensans", "Roboto", "Helvetica",
+  // Safari for OS X and iOS (San Francisco)
+  -apple-system,
+  // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
+  system-ui,
+  // Chrome < 56 for OS X (San Francisco)
+  BlinkMacSystemFont,
+  sans-serif;
+$sans : $sans-serif;
+
+// serif
+$serif : "Playfair Display" , serif;
+$serif-article : "Times New Roman" , serif;
+
+// condensed
+$condensed : "Ostrich Sans", "Oswald", "Bebas Neue", sans-serif;
+
+// geometric
+$geo :  "Montserrat", "Open Sans" ,sans-serif;
+$code: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+// size
+$text-size : 1rem;
+$text-small : 0.75rem;
+$text-medium : 1rem;
+$text-large : 1.5rem;
+$text-xlarge : 2rem;
+$text-xxlarge : 3rem;
+$text-xxxlarge : 4rem;
+$text-xxxxlarge : 6rem;
+
+
+// $marginLeft : 240px;
+$iconSize : 96px;
+$mediumMarginLeft : $iconSize + 40px + 48px;
+$marginLeft : 48px * 4 + 40px;
+$maxContentWidth: 800px;
+
+
+// device breakpoint size
+$small-up: 576px;
+$medium-up: 768px;
+$large-up: 1024px;
+$xlarge-up: 1200px;
+$xxlarge-up: 1600px;

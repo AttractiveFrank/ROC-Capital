@@ -1,0 +1,29 @@
+.img-frame{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: $medium-up) {
+        padding: 0;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        // max-width: 360px;
+    }
+    &.portrait{
+        .img-1{
+            max-width: 320px;
+        }
+    }
+    .img-1{
+        width: 100%;
+        // max-width: 420px;
+        position: relative;
+        z-index: 0;
+        img{
+            position: relative;
+            z-index: 1;
+        }
+    }
+}

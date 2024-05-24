@@ -1,0 +1,56 @@
+// buttons
+// additional UI, Views
+.btn{
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  min-height: 46px;
+  line-height: 1.2;
+  &.no-border{
+    border: none;
+  }
+}
+.btn-sm{
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  min-height: 30px;
+}
+// reseter
+// button:focus{
+//   outline: none;
+// }
+
+.btn-round{
+  // padding: 0.75rem 1.5rem;
+  border-radius: 10rem;
+}
+.btn-rect{
+  border-radius: 0;
+}
+// link button
+.btn-link{
+
+    &.active,
+    &:active{
+
+    }
+    &.disabled,
+    &:disabled{
+
+    }
+}
+
+
+// standard buttons
+@import "button/btn";
+@import "button/btn-social";
+@import "button/btn-underline";
+@import "button/btn-arrow";
+@import "button/btn-outline";
+@import "button/btn-framed";
+
+// icon buttons
+@import "button/icon-btn";
+
+

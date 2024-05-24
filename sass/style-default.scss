@@ -1,0 +1,62 @@
+/*-----------------------------------------------------------------
+[Legal Notice]
+
+Copyright (c) Miradontsoa
+Website Template by miradontsoa
+http://highhay.com
+http://miradontsoa.com
+
+IMPORTANT : This is an overwritting CSS rules of the default layout of the template (main.css).
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+/** CSS Reference
+    1. Init Tag style
+    2. Page cover on scroll / .page-cover
+**/
+/*------------------------------------------------------------------
+[colors]
+    blue : #037FD5
+    black : #111111
+**/
+
+@import "variables";
+
+// $black : #3d3d3d;
+$black : #111111;
+$color1 : #037FD5;
+/* 1. Init Tag style */
+a{
+    color: $color1;
+    &:hover{
+        color: transparentize($color1, 0.2)
+    }
+}
+/* 2. Page cover on scroll / .page-cover */ 
+.page-cover{
+    &:after{
+        content: "";
+        // background: linear-gradient(to left, #D1335B, #00152e);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 1;
+        transition: 0.3s;
+        // @media (min-width: $large-up) {
+        //     left: 40px;
+        //     right: 40px;
+        //     bottom: 40px;
+        //     top: 40px;
+        // }
+    }
+    &.scrolled:after{
+        // background: $black;
+        // background: #0d0d0d;
+        // background: rgba(#000, 0.8);
+        background: $black;
+    }
+}

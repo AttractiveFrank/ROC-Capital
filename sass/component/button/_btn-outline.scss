@@ -1,0 +1,91 @@
+.btn-outline{
+    background: transparent;
+    border-radius: 0;
+    border: 1px solid $white;
+    position: relative;
+    padding: 0.85rem 1.25rem;
+    background: rgba(black,0.2);
+    .text{
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+    }
+    .icon{
+        vertical-align: middle;
+        position: relative;
+        height: 16px;
+        width: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s;
+        // border: 1px solid $white;
+        border-radius: 0;
+        box-sizing: border-box;
+        &.big{
+            font-size: 1.5rem;
+            margin-top: -0.25em;
+        }
+        // overflow: hidden;
+        .arrow-right{
+            margin-left: 8px;
+            &:before,
+            &:after{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                height: 12px;
+                width: 12px;
+                transform:  rotate(-135deg);
+                border: 2px solid rgba($white, 1);
+                border-top: none;
+                border-right: none;
+                background: transparent;
+                transition: 0.3s;
+            }
+            &:before{
+                transform: translateX(8px) rotate(-135deg);
+            }
+        }
+        .arrow-left{
+            margin-right: 8px;
+            &:before,
+            &:after{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                height: 12px;
+                width: 12px;
+                transform:  translateX(-4px) rotate(45deg);
+                border: 2px solid rgba($white, 1);
+                border-top: none;
+                border-right: none;
+                background: transparent;
+                transition: 0.3s;
+            }
+            &:before{
+                transform: translateX(4px) rotate(45deg);
+            }
+        }
+    }
+    &:hover{
+        background: rgba($white, 0.2);
+        border: 1px solid $white;
+        .icon{
+            .arrow-right{
+                &:after{
+                    border-left: none;
+                    transform: translateY(-5px) rotate(0);
+                }
+            }
+            .arrow-left{
+                &:before{
+                    border-left: none;
+                    transform: translateY(-5px) translateX(3px) rotate(0);
+                }
+            }
+        }
+    }
+}

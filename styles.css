@@ -1,0 +1,81 @@
+.mobileImg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/10;
+}
+
+.heightAuto {
+  background-color: transparent;
+  height: auto;
+}
+
+.ImgContainer {
+  background-size: contain !important;
+}
+
+h3 {
+  font-size: clamp(10px, 4vw, 32px);
+}
+
+.textMobileBg {
+  height: auto !important;
+}
+
+
+@media(max-width:1200px) {
+  .textMobile {
+    height: 400px;
+    overflow: scroll;
+
+  }
+
+  .textMobileBg {
+    height: 500px;
+  }
+}
+
+@media(max-width:1000px) {
+  .textMobile {
+    height: 350px;
+    overflow: scroll;
+    padding: 20px;
+  }
+}
+
+@media(max-width:800px) {
+  .textMobile {
+    height: 300px;
+    overflow: scroll;
+    padding: 20px;
+  }
+}
+
+@media(max-width:650px) {
+  .textMobile {
+    height: 200px;
+    overflow: scroll;
+    padding: 10px;
+  }
+}
+
+
+@media(max-width:500px) {
+  .textMobile {
+    height: 100px;
+    overflow: scroll;
+    padding: 5px;
+  }
+}
+
+@media(max-width:300px) {
+  .textMobile {
+    height: 50px;
+    overflow: scroll;
+    padding: 3px;
+    margin-bottom: 0px !important;
+  }
+
+  /* .textMobileBtn {
+    margin: 0px;
+  } */
+}

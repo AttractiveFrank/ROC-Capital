@@ -1,0 +1,112 @@
+/*-----------------------------------------------------------------
+[Legal Notice]
+
+Copyright (c) Miradontsoa
+Website Template by miradontsoa
+http://highhay.com
+http://miradontsoa.com
+
+IMPORTANT : This is the default layout of the template. Sample CSS overwriting
+to altering this css file can be found in "style-default.css" and "style-colorX.css" file 
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+/** CSS Reference
+	0. Base Style
+		0.1 Tag and Class Initializer
+		0.3 Typography Initializer
+	1. Components 
+		1.1 Buttons, form container, input form control
+			1.1.1 buttons / .btn , .btn-outline, .btn-arrow, .btn-icon
+			1.1.2 forms / .form-container-transparent, .form-control, .form-control-line, .form-control-outline, .form-group
+		1.2 Layout
+			1.2.1 Grid / grid-*
+			1.2.2 Articles / .article, .article-light
+			1.2.3 Images Layout / .image-frame /.image-frame-normal
+			1.2.4 Media
+		1.3 Sliders
+			1.3.1 Swiper slider /.carousel-swiper-slider
+		1.4 Additional UI
+			1.4.1 Page cover / .page-cover
+	2. Page Header menu icon and nav dot
+		2.1 Page header / .page-header / .page-header-alpha
+		2.2 Menu-icon / .menu-icon
+		2.3 Navigation dot / #fp-nav
+	3. Page Footer / .page-footer 
+	4. Pages Setting
+		4.1 Default settings / .page-main
+		4.2 Body page / .body-page
+		4.3 Page footer / .page-footer
+	5. Sections / .section
+		5.1 Default layout settings
+			5.1.1 Section layout
+				a. Section / .section / .section-text-dark
+				b. Section cover / .section-cover-tier, .section-cover-full, .cover-content, .section-cover-half-left
+				c. Section footer / Scrolldown: .scrolldown / slider navigation .slider-navigation / Footer registration form .footer-register
+				d. Section text and image content / .section-content
+		5.2 Home screen section / .section-home
+		5.3 Section slides
+			5.3.1 Services slides / .services-slider
+			5.3.2 Projects slides / .projects-slider
+			5.3.3 Gallery slides / .gallery-slider
+	6. Helper classes / Responsiveness
+		6.1 Utility Helper classes 
+		6.2 Typography Helper classes / .display-*
+		6.3 Optional Responsiveness
+
+**/
+/*---------- 
+[Colors]
+    text color : #FFFFFF, #FFF
+	black : #1d1d1d, rgba(0,0,0,0.15), rgba(0,0,0,0.2), rgba(0,0,0,0.5)
+	white : #ffffff
+[Typography]
+	font-family :
+	- Sanserif font :  Open sans / Helvetica with fallback to system-ui fonts
+	- Geometric font : Montserrat
+	- Serif font : Playfair Display
+*/
+
+/* 0. Base style */
+/* 0.1 Tag and Class Initializer */
+// variables and mixins
+@import "variables";
+@import "functions";
+@import "mixins";
+// initializer
+@import "init/print";
+@import "init/init";
+
+/* 0.2 Typography Initializer */
+@import "init/typography";
+
+/* 1 Components */
+@import "components";
+// /* 2 Page header / page-header, page-header-alpha */
+// @import "page/header";
+
+
+/* 2 Page Header menu icon and nav dot  */
+/* 2.1 Page header / .page-header / .page-header-alpha */
+@import "component/page-headers";
+/* 2.2 Menu-icon / .menu-icon */
+@import "component/menu-icon";
+/* 2.3 Navigation dot / #fp-nav */
+@import "component/nav-right-dot";
+
+/* 4 Pages Setting */
+@import "pages";
+
+/* 5 Sections */
+@import "sections";
+
+/* 6. Helper classes / Responsiveness */
+/* 6.1 Utility Helper classes */
+@import "utilities/helper";
+/* 6.2 Typography Helper classes / .display-* */
+@import "utilities/typography";
+/* 6.3 Optional Responsiveness */
+@import "utilities/responsive";
+

@@ -1,0 +1,24 @@
+// section of page
+/* 5.1 Default layout settings */
+/* 5.1.1 Section layout */
+@import "section/section-default";
+/* 5.1.2 Section aside / .section-aside */
+@import "section/section-aside";
+@import "section/section-footer";
+
+/* 5.2 Home screen section / .section-home */
+@import "section/section-home";
+
+/* 5.3 Section slides */
+/* 5.3.1 Services slides / .services-slider */
+@import "section/section-services";
+/* 5.3.2 Projects slides / .projects-slider */
+@import "section/section-projects";
+/* 5.3.3 Gallery slides / .gallery-slider */
+@import "section/section-gallery";
+/* 5.3.4 Section contact content / .address-container */
+@import "section/section-contact";
+
+/* 5.3 Section list / .section-list / .project-list */
+@import "section/section-list";
+

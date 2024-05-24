@@ -1,0 +1,799 @@
+/*-----------------------------------------------------------------
+[Legal Notice]
+
+Copyright (c) Miradontsoa
+Website Template by miradontsoa
+http://highhay.com
+http://miradontsoa.com
+
+IMPORTANT : This is an overwritting CSS rules of the default layout of the template (main.css).
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+/** CSS Reference
+    0. Init Tag style
+    1. Background Color for .body-page, .body-item, .section-item, .section-gallery
+    2. Page cover frame / .cover-frame
+    3. Page header and menu icon / .menu-icon / .page-header-alpha
+    4. Section content color and font / .section, .display-*, typography
+    5. Sliders content color /.projects-slider, .content-white
+    6. Images frames Colors
+    7. Buttons Colors / .btn-*
+    8. Form and input Colors / .form-control-lie, .form-container / .form-control-outline
+    9. Page footer and dot nav / .page-footer / #fp-nav
+**/
+/*------------------------------------------------------------------
+[colors]
+    blue : #61b8ff
+    black : #3d3d3d
+    dark black : #1d1d1d
+**/
+
+@import "variables";
+
+$black : #3d3d3d;
+$dark-black : #1d1d1d;
+$color1 : #61b8ff;
+// $color1 : #ff6167;
+// $color1 : #f8204b;
+// white background and black text : overwrite black and white colors
+
+/* 0. Init Tag style */
+a {
+    color: $color1;
+
+    &:hover {
+        color: transparentize($color1, 0.2)
+    }
+}
+
+/* 1. Background Color for .body-page, .body-item, .section-item, .section-gallery */
+.body-page {
+    background-color: $white;
+    color: $black;
+}
+
+.body-item {
+    background-color: $white;
+    color: $black;
+}
+
+.section-item {
+    background-color: $white;
+}
+
+.section-gallery {
+    background-color: $white;
+}
+
+/* 2. Page cover frame / .cover-frame */
+.cover-frame::before,
+.cover-frame::after,
+.cover-frame .sides::before,
+.cover-frame .sides::after {
+    border-color: rgba($black, 0.2)
+}
+
+/* 3. Page header and menu icon / .menu-icon / .page-header-alpha */
+.menu-icon {
+    opacity: 1;
+    border-color: $black;
+    background: $white;
+
+    @media (min-width: $medium-up) {}
+
+    &.menu-visible,
+    &:hover {
+        background: $light-gray;
+        border-color: $black;
+    }
+}
+
+.menu-icon .bars .bar1,
+.menu-icon .bars .bar2,
+.menu-icon .bars .bar3 {
+    // background: $black;
+    // background: $dark-black;
+    background: #1d1d1d !important;
+    // background: $color1;
+}
+
+.body-item .page-header-alpha .navbar-brand {
+    color: $white;
+}
+
+.page-header-alpha .all-menu-wrapper {
+    background: $white;
+}
+
+.page-header-alpha .navbar-mainmenu .nav-item,
+.page-header-alpha .navbar-mainmenu {
+
+    // background: $white;
+    a {
+        color: $black;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.page-header-alpha .navbar-mainmenu .menu-social {
+    p {
+        color: $black;
+
+        a {
+            color: $black;
+
+            &:hover {
+                color: $gray;
+            }
+        }
+    }
+
+    .social a {
+        color: $black;
+
+        &:hover {
+            color: $gray;
+        }
+    }
+}
+
+.page-header-alpha .navbar-mainmenu:before {
+    @media (min-width: $medium-up) {
+        border-color: $black;
+    }
+}
+
+.page-header-alpha .navbar-sidebar {
+    opacity: 1;
+}
+
+.page-header-alpha .all-menu-wrapper .navbar-nav a {
+    opacity: 1;
+}
+
+.page-header-alpha .navbar-sidebar a {
+    color: $black;
+}
+
+.page-header-alpha .navbar-sidebar .nav-item a {
+    color: $black;
+    border-color: $gray;
+    background: $white;
+}
+
+.page-header-alpha .navbar-sidebar .nav-item .txt::before {
+    background: $gray;
+}
+
+.page-header-alpha .navbar-sidebar .nav-item:hover,
+.page-header-alpha .navbar-sidebar .nav-item.active {
+    a {
+        background: $black;
+        color: $black;
+    }
+
+    .icon {
+
+        color: $white;
+    }
+}
+
+/* 4. Section content color and font / .section, .display-*, typography */
+.section-home .home-title,
+.display-title {
+    font-family: $serif;
+}
+
+.num-grid .num-wrapper .num::before,
+.display-decor::before {
+    background: rgba($black, 0.1);
+}
+
+.desc-decor:before {
+    border-color: $black;
+}
+
+.section:not(.section-text-bright) {
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        text-shadow: none;
+    }
+}
+
+.section p {
+    color: $black;
+}
+
+.section-content h4 {
+    font-weight: bold;
+}
+
+.section-wrapper .form-desc .display-title,
+.section-wrapper .title-desc .display-title {
+    color: $dark-black;
+}
+
+.section-title .title-bg {
+    color: $color1;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+
+.section.active .title-bg {
+    opacity: 0.05;
+    opacity: 0.1;
+}
+
+.slide-wrapper .legend h3 {
+    // color: $dark-black;
+}
+
+.section-text-bright {
+    color: $white;
+
+    a,
+    h4 {
+        color: $white;
+    }
+
+    p {
+        color: $white;
+    }
+
+    .section-wrapper .form-desc .display-title,
+    .section-wrapper .title-desc .display-title {
+        color: $white;
+    }
+
+    .btn-underline {
+        color: $white;
+
+        &:hover {
+            color: $white;
+        }
+
+        &:before,
+        &:after {
+            background: $white;
+        }
+    }
+}
+
+/* Page content text color / .content-white */
+.content-white {
+
+    &.page-header-alpha .navbar-sidebar .nav-item.active .txt,
+    &.page-header-alpha .navbar-sidebar .nav-item:hover .txt {
+        color: $white;
+    }
+}
+
+.text-bright {
+    &.page-header-alpha .navbar-sidebar .icon {
+        background: transparentize($black, 0.8);
+        color: $white;
+    }
+
+    &.page-header-alpha .navbar-sidebar :hover .icon,
+    &.page-header-alpha .navbar-sidebar .active .icon {
+        background: $white;
+        color: $black;
+    }
+
+    &.page-header-alpha .navbar-sidebar .active .txt {
+        color: $white;
+    }
+}
+
+.page-header-alpha .navbar-mainmenu {
+    @media (min-width: $medium-up) {
+        background: $white;
+    }
+}
+
+.service-list.decor {
+    border-color: $color1;
+}
+
+.img-frame-normal .img-1 .price {
+    color: $white;
+}
+
+.img-frame-normal .img-1 .price.bottom {
+    color: $color1;
+
+}
+
+.img-frame-normal .legend.decor::after {
+    border-color: $color1;
+}
+
+.section {
+    &.bg-level-1 {
+        background: $white;
+    }
+
+    &.bg-level-2 {
+        background: #f5f6f7;
+    }
+}
+
+.section-home-item {
+
+    .section-wrapper .form-desc .display-title,
+    .section-wrapper .title-desc .display-title {
+        color: $white;
+    }
+
+    p,
+    .title-desc {
+        color: $white;
+    }
+
+    .btn-outline-white {
+        color: #fff;
+        border-color: rgba($white, 0.2);
+    }
+}
+
+/* 5. Sliders content color /.projects-slider, .content-white */
+.projects-slider {
+    color: $white;
+
+    .section-wrapper .form-desc .display-title,
+    .section-wrapper .title-desc .display-title,
+    .num-grid .num-wrapper .num::before,
+    .display-decor::before {
+        background: rgba($white, 0.1);
+    }
+
+    p {
+        color: $white;
+    }
+
+    .btn {
+        background: rgba(black, 0);
+
+        &:hover {
+            background: rgba(black, 0.2);
+        }
+    }
+
+    .btn-outline {
+        color: $white;
+        border-color: $white;
+
+        .icon {
+            color: $white;
+
+            .arrow-left:after,
+            .arrow-left:before,
+            .arrow-right:before,
+            .arrow-right:after {
+                border-color: $white;
+            }
+        }
+
+        &:hover {
+            color: $white;
+            background: rgba($white, 0.2);
+            border-color: $white;
+        }
+    }
+
+    .slide-wrapper .legend .legend-bg {
+        @media (min-width: $large-up) {
+            top: 88px;
+            bottom: 88px;
+        }
+    }
+
+    .slide-wrapper .illustr {
+        @media (min-width: $large-up) {
+            top: 88px;
+            bottom: 88px;
+        }
+    }
+
+}
+
+.section-vertical-slide,
+.gallery-slider {}
+
+.content-white {
+
+    .section-wrapper,
+    .slide-wrapper {
+        color: $white;
+
+        &.page-header-alpha .navbar-sidebar .nav-item .txt {
+            color: $white;
+        }
+
+        .section-wrapper .form-desc .display-title,
+        .section-wrapper .title-desc .display-title,
+        p {
+            color: $white;
+        }
+
+        .num-grid .num-wrapper .num::before,
+        .display-decor::before {
+            background: rgba($white, 0.1);
+        }
+
+        .desc-decor:before {
+            border-color: $white;
+        }
+
+        .btn {
+            background: rgba(black, 0);
+
+            &:hover {
+                background: rgba(black, 0.2);
+            }
+        }
+
+        .btn-arrow {
+            color: $white;
+
+            .icon {
+                border-color: $white;
+                background: rgba($black, 0.1);
+            }
+
+            &:hover {
+                color: $white;
+
+                .icon {
+                    background: rgba($white, 0.2);
+                }
+            }
+        }
+
+        .btn-arrow>.icon .arrow-left::before,
+        .btn-arrow>.icon .arrow-left::after,
+        .btn-arrow>.icon .arrow-right::before,
+        .btn-arrow>.icon .arrow-right::after,
+        .btn-arrow>.icon .arrow-up::before,
+        .btn-arrow>.icon .arrow-up::after,
+        .btn-arrow>.icon .arrow-down::before,
+        .btn-arrow>.icon .arrow-down::after {
+            border-color: $white;
+        }
+
+        .slider-navigation .text p {
+            color: $white;
+        }
+
+        .btn-outline {
+            color: $white;
+            border-color: $white;
+
+            .icon {
+                color: $white;
+
+                .arrow-left:after,
+                .arrow-left:before,
+                .arrow-right:before,
+                .arrow-right:after {
+                    border-color: $white;
+                }
+            }
+
+            &:hover {
+                color: $white;
+                background: rgba($white, 0.2);
+                border-color: $white;
+            }
+        }
+    }
+
+    .section-slider-footer {
+        p {
+            color: $white;
+        }
+    }
+}
+
+
+/* 6. Images frames Colors */
+.img-frame-normal .img-1.shadow,
+.img-frame-legend-alpha .img-1.shadow {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.img-frame-legend-alpha .legend {
+    @media (min-width: $medium-up) {
+        color: $white;
+
+        p {
+            color: rgba($white, 0.75);
+        }
+    }
+
+}
+
+/* 7. Buttons Colors / .btn-* */
+.media-project {
+    .btn-transp-arrow {
+        color: $white;
+
+        &:hover {
+            color: $white !important;
+        }
+    }
+}
+
+.media-project .media-img::before {
+    border-color: rgba(black, 0.2);
+}
+
+.media-product .media-header h5,
+.media-product .media-header .category {
+    color: rgba(black, 0.25);
+}
+
+.media-product .media-body a {
+    color: $dark-black;
+}
+
+.media .icon {
+    color: $color1;
+}
+
+.icon-btn {
+    color: $black;
+
+    &:hover {
+        color: $color1;
+    }
+}
+
+.btn-arrow {
+    color: $black;
+    border-color: $black;
+    background: $white;
+
+    .icon {
+        border-color: $black;
+        background: rgba($white, 0.5);
+    }
+
+    &:hover {
+        color: $black;
+        background: rgba($light-gray, 0.9);
+        border-color: $black;
+    }
+}
+
+.btn-arrow>.icon .arrow-left::before,
+.btn-arrow>.icon .arrow-left::after,
+.btn-arrow>.icon .arrow-right::before,
+.btn-arrow>.icon .arrow-right::after,
+.btn-arrow>.icon .arrow-up::before,
+.btn-arrow>.icon .arrow-up::after,
+.btn-arrow>.icon .arrow-down::before,
+.btn-arrow>.icon .arrow-down::after {
+    border-color: $black;
+}
+
+.btn-underline {
+    color: $dark-black;
+
+    &:hover {
+        color: $black;
+    }
+
+    &:before,
+    &:after {
+        background: $dark-black;
+    }
+}
+
+.media-project {
+    .btn-underline {
+        color: $white;
+
+        &:hover {
+            color: $white;
+        }
+
+        &:before,
+        &:after {
+            background: $white;
+        }
+    }
+}
+
+.btn-social {
+    color: $black;
+    border-color: $black;
+    background: $white;
+
+    &:hover {
+        color: $black;
+        background: rgba($light-gray, 0.9);
+        border-color: $black;
+    }
+}
+
+.btn-outline {
+    color: $black;
+    border-color: $black;
+    background: $white;
+
+    .icon {
+        color: $black;
+
+        .arrow-left:after,
+        .arrow-left:before,
+        .arrow-right:before,
+        .arrow-right:after {
+            border-color: $black;
+        }
+    }
+
+    &:hover {
+        color: $black;
+        background: rgba($light-gray, 0.9);
+        border-color: $black;
+    }
+}
+
+.btn-transp-arrow.btn-primary.active,
+.btn-transp-arrow.btn-primary:active,
+.btn-transp-arrow.btn-primary:hover {
+    background-color: transparentize($black, 0.95);
+    color: $black;
+    box-shadow: none;
+}
+
+/* scroll down buttons*/
+.scrolldown {
+    color: $black;
+
+    a.up:after,
+    a.up:before,
+    a.down:after,
+    a.down:before {
+        border-color: $dark-black;
+    }
+
+    .separator {
+        background: rgba($dark-black, 0.5);
+    }
+}
+
+.slider-navigation p {
+    color: $black;
+}
+
+.section-footer.text-bright {
+    &.scrolldown {
+        color: $white;
+
+        a.up:after,
+        a.up:before,
+        a.down:after,
+        a.down:before {
+            border-color: $white;
+        }
+
+        .separator {
+            background: rgba($white, 0.5);
+        }
+    }
+}
+
+/* 8. Form and input Colors / .form-control-lie, .form-container / .form-control-outline */
+.form-container-transparent.form-container-white .form-desc h4 {
+    color: $black;
+}
+
+.form-container-transparent.form-container-white .form-input label {
+    color: $black;
+}
+
+.form-control-line.form-control-white {
+    border-color: $black;
+
+    &:focus {
+        border-color: $gray;
+    }
+}
+
+.form-control-outline.form-control-white {
+    border-color: $black;
+
+    &:focus {
+        border-color: $gray;
+    }
+}
+
+// message form
+.form-control-outline,
+.form-control-line {
+    border-color: $black;
+
+    &:focus {
+        border-color: $gray;
+    }
+}
+
+
+/* 9. Page footer and dot nav / .page-footer / #fp-nav */
+.page-footer .footer-left p {
+    color: transparentize($black, 0.5);
+}
+
+.page-footer .footer-right .social a {
+    color: transparentize($black, 0.5);
+}
+
+.page-footer .footer-right .social a:hover {
+    color: $black;
+    color: $color1;
+}
+
+.page-footer .footer-right p {
+    color: $black;
+}
+
+.page-footer .footer-right p .marked {
+    color: $color1;
+}
+
+.page-footer .footer-right .social-text a {
+    color: $black;
+
+    &:hover {
+        color: $color1;
+    }
+}
+
+.page-footer.text-bright .footer-right .social-text a {
+    color: white;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+/* dot nav at right */
+#fp-nav ul li a span {
+    background: rgba($black, 1);
+}
+
+#fp-nav li .active span,
+.fp-slidesNav .active span {
+    background: rgba($black, 1);
+}
+
+#fp-nav span:after,
+.fp-slidesNav span:after {
+    background: rgba($black, 0.2);
+}
+
+// text-bright-setion
+#fp-nav.text-bright ul li a span {
+    background: rgba($white, 1);
+}
+
+#fp-nav.text-bright li .active span,
+.fp-slidesNav .active span {
+    background: rgba($white, 1);
+}
+
+#fp-nav.text-bright span:after,
+.fp-slidesNav span:after {
+    background: rgba($white, 0.5);
+}

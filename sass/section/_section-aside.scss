@@ -1,0 +1,99 @@
+.section{
+    .section-aside{
+        &.aside-bottom{
+            @media (min-width: $medium-up) and (orientation: landscape){
+                position: absolute;
+                bottom: 88px;
+                padding-right: 40px + 48px;
+                right: 0;
+                width: 50%;
+                width: 50vw;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                flex-direction: column;
+                z-index: 1;
+            }
+            .a-wrapper{
+                width: 100%;
+            }
+        }
+        &.small-relative,
+        &.small-relative.aside-middle{
+            position: relative;
+            top: auto;
+            bottom: auto;
+            left: auto;
+            right: 0;
+            width: 100%;
+            margin-top: 16px;
+            padding-right: 0;
+            align-items: flex-start;
+            justify-content: flex-start;
+            @media (min-width: $large-up) and (orientation: landscape){
+                position: absolute;
+                top: 88px;
+                bottom: 88px;
+                margin-right: 40px + 48px;
+                margin-top: 0;
+                right: 0;
+                width: 50%;
+                width: 31vw;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                flex-direction: column;
+                z-index: 1;
+            }
+        }
+        &.gallery-nav{
+            @media (max-width: 1023px) {
+                display: none;
+            }
+        }
+        &.aside-tier,
+        &.small-relative.aside-tier{
+            @media (min-width: $large-up) and (orientation: landscape){
+                width: 40%;
+                width: 40vw;
+            }
+        }
+        .message-form{
+            width: 100%;
+            @media (min-width: $large-up) {
+                width: 320px;
+            }
+            h4{
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+        &.aside-top{
+            @media (min-width: $medium-up) and (orientation: landscape){
+                position: absolute;
+                top: 120px;
+                left: 0;
+                padding-left: 64px;
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+                z-index: 1;
+            }
+            .a-wrapper{
+                width: 100%;
+            }
+        }
+        .message-form{
+            width: 100%;
+            @media (min-width: $large-up) {
+                width: 320px;
+            }
+            h4{
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    }
+}

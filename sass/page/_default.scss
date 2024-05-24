@@ -1,0 +1,18 @@
+// default page layout for .page-main and body
+.page-main{
+    min-height: 100%;
+}
+
+.body-page{
+    background-color: $black;
+    color: $white;
+}
+.body-item{
+    background-color: $black;
+    color: $white;
+}
+.item-page{
+    @media (min-width: 768px) {
+        // margin-bottom: 40px;
+    }
+}
